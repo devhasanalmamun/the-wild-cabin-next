@@ -1,4 +1,5 @@
-import Link from "next/link";
+import AppFooter from "@/layouts/landings/AppFooter";
+import AppNavbar from "@/layouts/landings/AppNavbar";
 
 interface IProps {
   children: React.ReactNode;
@@ -7,19 +8,9 @@ interface IProps {
 export default function AppLayout(props: IProps) {
   return (
     <>
-      <nav>
-        <ul className="flex gap-4">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/about-us">About us</Link>
-          </li>
-        </ul>
-      </nav>
+      <AppNavbar />
       <main>{props.children}</main>
-
-      <footer>Footer</footer>
+      <AppFooter />
     </>
   );
 }
