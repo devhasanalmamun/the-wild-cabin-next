@@ -5,7 +5,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-export default function AdminLayout(props: IProps) {
+export default function AdminDashboardLayout(props: IProps) {
   return (
     <>
       <AdminDashboardNavbar />
