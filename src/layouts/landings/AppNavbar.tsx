@@ -4,11 +4,13 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function AppNavbar() {
   const pathname = usePathname();
   return (
     <nav>
+      <Image src="/logo.png" width={220} height={220} alt="logo" />
       <ul className="flex gap-4">
         <li>
           <Link className={cn("text-slate-800", pathname === "/" && "text-green-600")} href="/">
